@@ -7,8 +7,9 @@ library(tidyverse)
 library(tidylog)
 library(glue)
 library(hrbrthemes)
+library(memoise)
 
-aov_car_mm <- memoise::memoize(afex::aov_car)
+aov_car_m <- memoize(afex::aov_car)
 
 # data import & wrangling -----------------------------------------------------
 dataset <-
@@ -48,11 +49,11 @@ dataset_analysis_results <-
   mutate(crt_c = scale(crt, scale = FALSE)) %>% 
   nest() %>% 
   mutate(results_d = map(data,
-                         ~ aov_car_mm(dprime ~ crt_c + Error(id/congruency),
+                         ~ aov_car_m(dprime ~ crt_c + Error(id/congruency),
                                       data = as.data.frame(.x),
                                       factorize = FALSE)),
          results_c = map(data,
-                         ~  aov_car_mm(c ~ crt_c + Error(id/congruency),
+                         ~  aov_car_m(c ~ crt_c + Error(id/congruency),
                                        data = as.data.frame(.x),
                                        factorize = FALSE) ))
 
@@ -246,11 +247,11 @@ dataset_analysis %>%
               values_from = c(dprime, c)) %>% 
   nest() %>% 
   mutate(results_d = map(data,
-                         ~ aov_car_mm(dprime ~ crt_c + Error(id/congruency),
+                         ~ aov_car_m(dprime ~ crt_c + Error(id/congruency),
                                       data = as.data.frame(.x),
                                       factorize = FALSE)),
          results_c = map(data,
-                         ~  aov_car_mm(c ~ crt_c + Error(id/congruency),
+                         ~  aov_car_m(c ~ crt_c + Error(id/congruency),
                                        data = as.data.frame(.x),
                                        factorize = FALSE) ))
 
@@ -272,11 +273,11 @@ dataset_analysis %>%
     mutate(crt_c = scale(crt, scale = FALSE)) %>% 
     nest() %>% 
     mutate(results_d = map(data,
-                           ~ aov_car_mm(dprime ~ crt_c * ideology_c + Error(id/congruency),
+                           ~ aov_car_m(dprime ~ crt_c * ideology_c + Error(id/congruency),
                                         data = as.data.frame(.x),
                                         factorize = FALSE)),
            results_c = map(data,
-                           ~  aov_car_mm(c ~ crt_c * ideology_c + Error(id/congruency),
+                           ~  aov_car_m(c ~ crt_c * ideology_c + Error(id/congruency),
                                          data = as.data.frame(.x),
                                          factorize = FALSE) ))
   

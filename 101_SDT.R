@@ -9,9 +9,14 @@ library(tidylog)
 library(glue)
 library(hrbrthemes)
 library(DescTools)
+library(memoise)
 
 theme_set(theme_ipsum())
 
+# custom ----------------------------------------------------------------------
+# Afex is sometimes very slow. Because it is a pain to launch the script, wait, 
+# just to launch it again, we use a memoise versions instead.
+aov_car_m <- memoise(afex::aov_car)
 
 # Pennycook, Cannon, & Rand - study 2 -----------------------------------------
 dataset_study_2 <-
@@ -34,13 +39,13 @@ dataset_study_2 <-
            case_when(warning == 1 ~ "No warning",
                      warning == 2 ~ "Warning")) 
 
-afex::aov_car(dprime ~ 1 + Error(id/familiarity),
+aov_car_m(dprime ~ 1 + Error(id/familiarity),
               data = as.data.frame(dataset_study_2)) %>% 
   afex::nice(intercept = TRUE) 
 
-afex::aov_car(c ~ 1 + Error(id/familiarity),
-              data = as.data.frame(dataset_study_2)) %>% 
-  afex::nice(intercept = TRUE) 
+study_2_c_model <-
+  aov_car_m(c ~ 1 + Error(id/familiarity),
+              data = as.data.frame(dataset_study_2))
 
 # intercept
 dataset_study_2 %>% 
@@ -112,7 +117,7 @@ dataset_study_3 %>%
   filter(presentation_lin != 0) %>% 
   mutate(presentation_lin = presentation_lin %>% as.factor()) %>% 
   as.data.frame() %>% 
-  afex::aov_car(c ~ 1 + Error(id/presentation_lin),
+  aov_car_m(c ~ 1 + Error(id/presentation_lin),
                 data = .) %>% 
   afex::nice(intercept = TRUE) 
 
@@ -120,7 +125,7 @@ dataset_study_3 %>%
   filter(presentation_lin != 0) %>% 
   mutate(presentation_lin = presentation_lin %>% as.factor()) %>% 
   as.data.frame() %>% 
-  afex::aov_car(dprime ~ 1 + Error(id/presentation_lin),
+  aov_car_m(dprime ~ 1 + Error(id/presentation_lin),
                 data = .) %>% 
   afex::nice(intercept = TRUE) 
 
