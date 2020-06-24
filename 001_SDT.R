@@ -255,7 +255,9 @@ dataset_analysis %>%
                                        data = as.data.frame(.x),
                                        factorize = FALSE) ))
 
-# Tue Feb 25 15:43:02 2020 ------------------------------
+
+# exploratory analysis --------------------------------------------------------
+# Tue Feb 25 15:43:02 2020 ----------------------------------------------------
 # Are the effects the same for dems and republicans?
   
   dataset_analysis <- 
@@ -300,7 +302,7 @@ dataset_analysis %>%
     map(~summary(.x))
   
   
-# Tue Feb 25 17:33:25 2020 ------------------------------
+# Tue Feb 25 17:33:25 2020 ----------------------------------------------------
   dataset_analysis %>% 
     mutate(id = glue("{study}-{id}")) %>% 
     group_by(dataset) %>% 
@@ -314,6 +316,6 @@ dataset_analysis %>%
                                                   "pro-democrat",
                                                   "pro-republican")) %>% 
     group_by(dataset) %>%
-    group_map(~lm(diff_bias ~ crt_c * ideology, .x) %>%  summary()) 
-    nest()  
-  
+    group_map(~lm(diff_bias ~ crt_c * ideology, .x) %>%  
+                summary()) 
+
