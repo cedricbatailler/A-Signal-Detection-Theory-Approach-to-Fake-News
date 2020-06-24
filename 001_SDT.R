@@ -31,7 +31,7 @@ dataset <-
   mutate(hit_rate = (real_accurate + .5) / (real_inaccurate + real_accurate + 1.5),
          fa_rate  = (fake_accurate + .5) / (fake_accurate + fake_inaccurate + 1.5),
          dprime   = qnorm(hit_rate) - qnorm(fa_rate),
-         c        = (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
+         c        = -1 * (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
   mutate(congruency_c = case_when(congruency == "congruent"   ~  .5,
                                   congruency == "incongruent" ~ -.5))
 
@@ -107,7 +107,11 @@ dataset %>%
   theme_ipsum(base_size = 16, 
               strip_text_size = 16, axis_title_size = 16)
 
-ggsave("figures/Pennycook & Rand (2018) - d' (combined).jpg", dpi = 600)
+ggsave("figures/Pennycook & Rand (2018) - d' (combined).jpg",
+       width = 8.5,
+       height = 4.75,
+       units = "in",
+       dpi = 600)
 
 # c ---------------------------------------------------------------------------
 dataset %>%
@@ -140,7 +144,11 @@ dataset %>%
   theme_ipsum(base_size = 16, 
               strip_text_size = 16, axis_title_size = 16)
 
-ggsave("figures/ennycook & Rand (2018) - c (combined).jpg", dpi = 600)
+ggsave("figures/ennycook & Rand (2018) - c (combined).jpg", 
+       width = 8.5,
+       height = 4.75,
+       units = "in",
+       dpi = 600)
 
 # Appendix figures ------------------------------------------------------------
 # d' --------------------------------------------------------------------------

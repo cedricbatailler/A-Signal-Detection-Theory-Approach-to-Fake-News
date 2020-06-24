@@ -32,7 +32,7 @@ dataset_study_2 <-
   mutate(hit_rate = (real_accurate + .5) / (real_inaccurate + real_accurate + 1.5),
          fa_rate  = (fake_accurate + .5) / (fake_accurate + fake_inaccurate + 1.5),
          dprime   = qnorm(hit_rate) - qnorm(fa_rate),
-         c        = (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
+         c        = -1 * (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
   mutate(familiarity_c = case_when(familiarity == "old" ~  .5,
                                    familiarity == "new" ~ -.5),
          warning = 
@@ -61,7 +61,6 @@ dataset_study_2 %>%
             sd   = sd(dprime))
 
 # 
-
 
 study_2_c_model %>% 
   afex::nice(intercept = TRUE) 
@@ -102,7 +101,7 @@ dataset_study_3 <-
   mutate(hit_rate = (real_accurate + .5) / (real_inaccurate + real_accurate + 1.5),
          fa_rate  = (fake_accurate + .5) / (fake_accurate + fake_inaccurate + 1.5),
          dprime   = qnorm(hit_rate) - qnorm(fa_rate),
-         c        = (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
+         c        = -1 * (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
   mutate(presentation_lin  = presentation - 2,
          presentation_quad = case_when(presentation == 1 ~  1,
                                        presentation == 2 ~ -2,
@@ -266,7 +265,11 @@ bind_rows(
   theme_ipsum(base_size = 16, 
               strip_text_size = 16, axis_title_size = 16) 
 
-ggsave("figures/Pennycook et al. (2018) - c (combined).jpg", dpi = 600)
+ggsave("figures/Pennycook et al. (2018) - c (combined).jpg",
+       width = 8.5,
+       height = 4.75,
+       units = "in",
+       dpi = 600)
 
 # d' ----------------------------------------------------------------------
 bind_rows(
@@ -335,7 +338,11 @@ bind_rows(
   theme_ipsum(base_size = 16, 
               strip_text_size = 16, axis_title_size = 16) 
 
-ggsave("figures/Pennycook et al. (2018) - d' (combined).jpg", dpi = 600)
+ggsave("figures/Pennycook et al. (2018) - d' (combined).jpg", 
+       width = 8.5,
+       height = 4.75,
+       units = "in",
+       dpi = 600)
 
 # Sat Feb 29 15:29:51 2020 ------------------------------
 bind_rows(
