@@ -1,0 +1,16 @@
+calc_sgv                Compute the standardized generalized variance
+                        (SGV) of a blocked diagonal matrix.
+cmp_R2                  Compute R2 with a specified C matrix
+glmPQL                  Compute PQL estimates for fixed effects from a
+                        generalized linear model.
+is.CompSym              Checks if a matrix is Compound Symmetric.
+make.partial.C          Generate partial contrast matrices
+plot.R2                 Visualize standardized effect sizes and model R
+                        squared
+pqlmer                  pqlmer
+print.R2                Print the contents of an R2 object
+r2beta                  r2beta Compute R Squared for Mixed Models
+r2dt                    R Squared Difference Test (R2DT). Test for a
+                        statistically significant difference in
+                        generalized explained variance between two
+                        candidate models.

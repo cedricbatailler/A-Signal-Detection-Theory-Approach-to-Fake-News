@@ -1,0 +1,71 @@
+Package: afex
+Type: Package
+Title: Analysis of Factorial Experiments
+Depends: R (>= 3.1.0), lme4 (>= 1.1-8)
+Suggests: emmeans (>= 1.4), coin, xtable, parallel, plyr, optimx,
+        nloptr, knitr, rmarkdown, R.rsp, lattice, latticeExtra,
+        multcomp, testthat, mlmRev, dplyr, tidyr, dfoptim, Matrix,
+        psychTools, ggplot2, MEMSS, effects, carData, ggbeeswarm, nlme,
+        cowplot, jtools, ggpubr, ggpol, MASS, glmmTMB, brms, rstanarm
+Imports: pbkrtest (>= 0.4-1), lmerTest (>= 3.0-0), car, reshape2,
+        stats, methods, utils
+Description: Convenience functions for analyzing factorial experiments using ANOVA or
+         mixed models. aov_ez(), aov_car(), and aov_4() allow specification of
+         between, within (i.e., repeated-measures), or mixed (i.e., split-plot) 
+         ANOVAs for data in long format (i.e., one observation per row),
+         automatically aggregating multiple observations per individual and cell 
+         of the design. mixed() fits mixed models using lme4::lmer() and computes 
+         p-values for all fixed effects using either Kenward-Roger or Satterthwaite 
+         approximation for degrees of freedom (LMM only), parametric bootstrap 
+         (LMMs and GLMMs), or likelihood ratio tests (LMMs and GLMMs). 
+         afex_plot() provides a high-level interface for interaction or one-way 
+         plots using ggplot2, combining raw data and model estimates. afex uses 
+         type 3 sums of squares as default (imitating commercial statistical software).
+URL: http://afex.singmann.science/, https://github.com/singmann/afex
+BugReports: https://github.com/singmann/afex/issues
+License: GPL (>=2)
+Encoding: UTF-8
+VignetteBuilder: knitr, R.rsp
+Authors@R: c(person(given="Henrik", family="Singmann", role=c("aut", "cre"),
+          email="singmann@gmail.com", comment=c(ORCID="0000-0002-4842-3657")),
+         person(given="Ben", family="Bolker", role=c("aut")), 
+         person(given="Jake",family="Westfall", role=c("aut")), 
+         person(given="Frederik", family="Aust", role=c("aut"), 
+          comment = c(ORCID = "0000-0003-4900-788X")),
+         person(given="Mattan S.",family="Ben-Shachar", role=c("aut")), 
+         person(given="Søren", family="Højsgaard", role=c("ctb")),
+         person(given="John", family="Fox", role=c("ctb")), 
+         person(given="Michael A.", family="Lawrence", role=c("ctb")), 
+         person(given="Ulf", family="Mertens", role=c("ctb")), 
+         person(given="Jonathon", family="Love", role=c("ctb")), 
+         person(given="Russell", family="Lenth", role=c("ctb")), 
+         person(given="Rune", family="Haubo Bojesen Christensen", role=c("ctb")))
+Version: 0.26-0
+RoxygenNote: 7.0.2
+LazyData: true
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: afex
+RemoteUsername: cedricbatailler
+RemoteRef: master
+RemoteSha: 368dfb6fde9ec99288a2e0f412e4d016f2034cb5
+GithubRepo: afex
+GithubUsername: cedricbatailler
+GithubRef: master
+GithubSHA1: 368dfb6fde9ec99288a2e0f412e4d016f2034cb5
+NeedsCompilation: no
+Packaged: 2020-01-24 12:23:41 UTC; cedricbatailler
+Author: Henrik Singmann [aut, cre] (<https://orcid.org/0000-0002-4842-3657>),
+  Ben Bolker [aut],
+  Jake Westfall [aut],
+  Frederik Aust [aut] (<https://orcid.org/0000-0003-4900-788X>),
+  Mattan S. Ben-Shachar [aut],
+  Søren Højsgaard [ctb],
+  John Fox [ctb],
+  Michael A. Lawrence [ctb],
+  Ulf Mertens [ctb],
+  Jonathon Love [ctb],
+  Russell Lenth [ctb],
+  Rune Haubo Bojesen Christensen [ctb]
+Maintainer: Henrik Singmann <singmann@gmail.com>
+Built: R 3.6.1; ; 2020-01-24 12:23:42 UTC; unix

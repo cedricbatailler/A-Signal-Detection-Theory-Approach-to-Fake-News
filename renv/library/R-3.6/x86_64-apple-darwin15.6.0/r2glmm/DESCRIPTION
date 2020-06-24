@@ -1,0 +1,46 @@
+Package: r2glmm
+Type: Package
+Title: Computes R Squared for Mixed (Multilevel) Models
+Date: 2017-08-04
+Version: 0.1.2
+Authors@R: person("Byron", "Jaeger", email = "byron.jaeger@gmail.com", role = c("aut", "cre"))
+Description: The model R squared and semi-partial R squared for the linear and
+    generalized linear mixed model (LMM and GLMM) are computed with confidence
+    limits. The R squared measure from Edwards et.al (2008) <DOI:10.1002/sim.3429>
+    is extended to the GLMM using penalized quasi-likelihood (PQL) estimation
+    (see Jaeger et al. 2016 <DOI:10.1080/02664763.2016.1193725>). Three methods
+    of computation are provided and described as follows. First, The
+    Kenward-Roger approach. Due to some inconsistency between the 'pbkrtest'
+    package and the 'glmmPQL' function, the Kenward-Roger approach in the
+    'r2glmm' package is limited to the LMM. Second, The method introduced
+    by Nakagawa and Schielzeth (2013) <DOI:10.1111/j.2041-210x.2012.00261.x>
+    and later extended by Johnson (2014) <DOI:10.1111/2041-210X.12225>.
+    The 'r2glmm' package only computes marginal R squared for the LMM and does
+    not generalize the statistic to the GLMM; however, confidence limits and
+    semi-partial R squared for fixed effects are useful additions. Lastly, an
+    approach using standardized generalized variance (SGV) can be used for
+    covariance model selection. Package installation instructions can be found
+    in the readme file.
+Imports: mgcv, lmerTest, Matrix, pbkrtest, ggplot2, afex, stats, MASS,
+        gridExtra, grid, data.table, dplyr
+Suggests: lme4, nlme, testthat
+License: GPL-2
+LazyData: TRUE
+RoxygenNote: 6.1.1
+URL: https://github.com/bcjaeger/r2glmm
+BugReports: https://github.com/bcjaeger/r2glmm/issues
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: r2glmm
+RemoteUsername: bcjaeger
+RemoteRef: master
+RemoteSha: 0b6d7a484d42c617794dbf01df24d67cd9e15a77
+GithubRepo: r2glmm
+GithubUsername: bcjaeger
+GithubRef: master
+GithubSHA1: 0b6d7a484d42c617794dbf01df24d67cd9e15a77
+NeedsCompilation: no
+Packaged: 2020-01-27 15:17:45 UTC; cedricbatailler
+Author: Byron Jaeger [aut, cre]
+Maintainer: Byron Jaeger <byron.jaeger@gmail.com>
+Built: R 3.6.1; ; 2020-01-27 15:17:45 UTC; unix

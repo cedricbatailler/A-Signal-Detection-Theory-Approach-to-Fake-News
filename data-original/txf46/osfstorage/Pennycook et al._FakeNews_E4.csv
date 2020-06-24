@@ -1,0 +1,125 @@
+Study,Condition,Correct,Warned,News,Statement,Familiarized,Novel,ITF,plausibility,plausibility2
+1,S1-Imp,0,0,0,Smoking cigarettes is good for your lungs.,0.024,0.01,0.014,0.017,0.000289
+1,S1-Imp,0,0,0,The earth is a perfect square.,0.01,0.016,-0.006,0.013,0.000169
+1,S1-Imp,0,0,0,"Across the United States, only a total of 452 people voted in the last election.",0.04,0.022,0.018,0.031,0.000961
+1,S1-Imp,0,0,0,A single elephant weighs less than a single ant.,0.034,0.04,-0.006,0.037,0.001369
+1,S1-Plaus,1,0,0,More people live in the United States than in Malta.,0.882,0.868,0.014,0.875,0.765625
+1,S1-Plaus,1,0,0,Cows are larger than sheep.,0.942,0.948,-0.006,0.945,0.893025
+1,S1-Plaus,1,0,0,Coffee is a more popular drink in America than goat milk.,0.916,0.946,-0.03,0.931,0.866761
+1,S1-Plaus,1,0,0,There are more than fifty stars in the universe.,0.93,0.968,-0.038,0.949,0.900601
+1,S1-True,1,0,0,The thigh bone is the largest bone in the human body.,0.796,0.708,0.088,0.752,0.565504
+1,S1-True,1,0,0,Bolivia borders the Pacific Ocean.,0.508,0.482,0.026,0.495,0.245025
+1,S1-True,1,0,0,The largest dam in the world is in Pakistan.,0.484,0.388,0.096,0.436,0.190096
+1,S1-True,1,0,0,Mexico is the world's largest producer of silver.,0.6,0.492,0.108,0.546,0.298116
+1,S1-True,1,0,0,More presidents of the United States were born in Virginia than any other state.,0.69,0.594,0.096,0.642,0.412164
+1,S1-True,1,0,0,Helsinki is the capital of Finland.,0.764,0.748,0.016,0.756,0.5715359
+1,S1-True,1,0,0,Marconi is name of the inventor of the wireless radio.,0.648,0.6,0.048,0.624,0.389376
+1,S1-True,1,0,0,Billy the Kid's last name was Bonney.,0.592,0.51,0.082,0.551,0.303601
+1,S1-True,1,0,0,Tiber is the name of the river that runs through Rome.,0.65,0.628,0.022,0.639,0.408321
+1,S1-True,1,0,0,Canberra is the capital of Australia.,0.504,0.44,0.064,0.472,0.222784
+1,S1-False,0,0,0,George was the name of the goldfish in the story of Pinocchio.,0.544,0.426,0.118,0.485,0.235225
+1,S1-False,0,0,0,Johnson was the last name of the man who killed Jesse James.,0.554,0.488,0.066,0.521,0.271441
+1,S1-False,0,0,0,Charles II was the first ruler of the Holy Roman Empire.,0.47,0.388,0.082,0.429,0.184041
+1,S1-False,0,0,0,"Canopus is the name of the brightest star in the sky, excluding the sun.",0.54,0.426,0.114,0.483,0.233289
+1,S1-False,0,0,0,Tirpitz was the name of Germany's largest battleship that was sunk in World War II.,0.6,0.524,0.076,0.562,0.315844
+1,S1-False,0,0,0,John Kenneth Galbraith is the name of a well-known lawyer.,0.578,0.492,0.086,0.535,0.286225
+1,S1-False,0,0,0,Huxley is the name of the scientist who discovered radium.,0.532,0.48,0.052,0.506,0.256036
+1,S1-False,0,0,0,"The Cotton Bowl takes place in Auston, Texas.",0.504,0.454,0.05,0.479,0.229441
+1,S1-False,0,0,0,The drachma is the monetary unit for Macedonia.,0.62,0.552,0.068,0.586,0.343396
+1,S1-False,0,0,0,Angel Falls is located in Brazil.,0.592,0.558,0.034,0.575,0.330625
+2,S2-Fake,0,0,1,Fake1 clinton drunk after election,0.17,0.16666667,0.00333333,0.1683333,0.0283361
+2,S2-Fake,0,0,1,Fake2 trump stopped obama from going to castro's funeral,0.10666667,0.14,-0.03333333,0.1233333,0.0152111
+2,S2-Fake,0,0,1,Fake3 trump sent plane for marines,0.43,0.40666667,0.02333333,0.4183333,0.1750028
+2,S2-Fake,0,0,1,Fake4 pence marriage saved by gay conversion therapy,0.20333333,0.14333333,0.06,0.1733333,0.0300444
+2,S2-Fake,0,0,1,Fake5 pennsylvania court remove trump,0.21,0.17333333,0.03666667,0.1916667,0.0367361
+2,S2-Fake,0,0,1,Fake6 trump bringing back the draft,0.28333333,0.27666667,0.00666667,0.28,0.0784
+2,S2-Fake,0,0,1,Fake7 blm thug shoots himself,0.3,0.22333333,0.07666667,0.2616667,0.0684694
+2,S2-Fake,0,0,1,Fake8 brooks says trump should be assassinated,0.37,0.35,0.02,0.36,0.1296
+2,S2-Fake,0,0,1,Fake9 eastwood rejects medal of freedom from obama,0.38666667,0.25666667,0.13,0.3216667,0.1034694
+2,S2-Fake,0,0,1,Fake10 comey trump sign,0.34,0.26666667,0.07333333,0.3033333,0.0920111
+2,S2-Fake,0,0,1,Fake11 palin boycott mall of america because santa is white,0.29666667,0.25333333,0.04333333,0.275,0.075625
+2,S2-Fake,0,0,1,Fake12 trump ban gay tv shows,0.19666667,0.11,0.08666667,0.1533333,0.0235111
+2,S2-Real,1,0,1,Real1 dems try to prevent defectors to trump foxnews,0.43333333,0.38666667,0.04666667,0.41,0.1681
+2,S2-Real,1,0,1,Real2 trump can keep business bloomberg,0.52333333,0.46666667,0.05666667,0.495,0.245025
+2,S2-Real,1,0,1,Real3 trump on tech innovation wsj,0.61666667,0.57333333,0.04333333,0.595,0.354025
+2,S2-Real,1,0,1,Real4 nc repubs undermine dem gov huffpo,0.59333333,0.58,0.01333333,0.5866666,0.3441778
+2,S2-Real,1,0,1,Real5 putin involved in hack guardian,0.59333333,0.55,0.04333333,0.5716667,0.3268028
+2,S2-Real,1,0,1,Real6 trump lashes out at vanity fair npr,0.63333333,0.58,0.05333333,0.6066667,0.3680445
+2,S2-Real,1,0,1,Real7 companies keeping jobs in us msn,0.58333333,0.52,0.06333333,0.5516667,0.3043361
+2,S2-Real,1,0,1,Real8 woman lied about attack washpo,0.58333333,0.56,0.02333333,0.5716667,0.3268028
+2,S2-Real,1,0,1,Real9 trump protect lgbtq source,0.50666667,0.48,0.02666667,0.4933333,0.2433778
+2,S2-Real,1,0,1,Real10 trump muslim registry,0.66666667,0.61333333,0.05333333,0.64,0.4096
+2,S2-Real,1,0,1,Real11 mini recession surrounding trump tower slate,0.58666667,0.53,0.05666667,0.5583333,0.3117361
+2,S2-Real,1,0,1,Real12 trump inaccurate about russia nyt,0.63,0.61,0.02,0.62,0.3844
+2.5,S2-FakeWarning,0,1,1,Fake1 clinton drunk after election,0.17333333,0.13333333,0.04,0.1533333,0.0235111
+2.5,S2-FakeWarning,0,1,1,Fake2 trump stopped obama from going to castro's funeral,0.13333333,0.12,0.01333333,0.1266667,0.0160444
+2.5,S2-FakeWarning,0,1,1,Fake3 trump sent plane for marines,0.35666667,0.35333333,0.00333333,0.355,0.126025
+2.5,S2-FakeWarning,0,1,1,Fake4 pence marriage saved by gay conversion therapy,0.17333333,0.14,0.03333333,0.1566667,0.0245444
+2.5,S2-FakeWarning,0,1,1,Fake5 pennsylvania court remove trump,0.19,0.13333333,0.05666667,0.1616667,0.0261361
+2.5,S2-FakeWarning,0,1,1,Fake6 trump bringing back the draft,0.24666667,0.22333333,0.02333333,0.235,0.055225
+2.5,S2-FakeWarning,0,1,1,Fake7 blm thug shoots himself,0.23,0.18333333,0.04666667,0.2066667,0.0427111
+2.5,S2-FakeWarning,0,1,1,Fake8 brooks says trump should be assassinated,0.34666667,0.31,0.03666667,0.3283333,0.1078028
+2.5,S2-FakeWarning,0,1,1,Fake9 eastwood rejects medal of freedom from obama,0.31,0.24666667,0.06333333,0.2783333,0.0774694
+2.5,S2-FakeWarning,0,1,1,Fake10 comey trump sign,0.27666667,0.26,0.01666667,0.2683333,0.0720028
+2.5,S2-FakeWarning,0,1,1,Fake11 palin boycott mall of america because santa is white,0.27,0.21,0.06,0.24,0.0576
+2.5,S2-FakeWarning,0,1,1,Fake12 trump ban gay tv shows,0.13666667,0.09333333,0.04333333,0.115,0.013225
+2.5,S2-RealWarning,1,1,1,Real1 dems try to prevent defectors to trump foxnews,0.41333333,0.36666667,0.04666667,0.39,0.1521
+2.5,S2-RealWarning,1,1,1,Real2 trump can keep business bloomberg,0.52666667,0.5,0.02666667,0.5133333,0.2635111
+2.5,S2-RealWarning,1,1,1,Real3 trump on tech innovation wsj,0.60333333,0.62333333,-0.02,0.6133333,0.3761778
+2.5,S2-RealWarning,1,1,1,Real4 nc repubs undermine dem gov huffpo,0.58,0.56333333,0.01666667,0.5716667,0.3268028
+2.5,S2-RealWarning,1,1,1,Real5 putin involved in hack guardian,0.54666667,0.53,0.01666667,0.5383334,0.2898028
+2.5,S2-RealWarning,1,1,1,Real6 trump lashes out at vanity fair npr,0.57333333,0.58666667,-0.01333333,0.58,0.3364
+2.5,S2-RealWarning,1,1,1,Real7 companies keeping jobs in us msn,0.55,0.56,-0.01,0.555,0.308025
+2.5,S2-RealWarning,1,1,1,Real8 woman lied about attack washpo,0.61,0.55333333,0.05666667,0.5816666,0.3383361
+2.5,S2-RealWarning,1,1,1,Real9 trump protect lgbtq source,0.57333333,0.52333333,0.05,0.5483333,0.3006695
+2.5,S2-RealWarning,1,1,1,Real10 trump muslim registry,0.66,0.62,0.04,0.64,0.4096
+2.5,S2-RealWarning,1,1,1,Real11 mini recession surrounding trump tower slate,0.59,0.5,0.09,0.545,0.297025
+2.5,S2-RealWarning,1,1,1,Real12 trump inaccurate about russia nyt,0.61333333,0.58,0.03333333,0.5966667,0.3560112
+3,S3-Fake,0,0,1,Wfake1 clinton drunk after election,0.16333333,0.17333333,-0.01,0.1683333,0.0283361
+3,S3-Fake,0,0,1,Wfake2 trump protester paid 3500,0.48666667,0.40666667,0.08,0.4466667,0.1995111
+3,S3-Fake,0,0,1,Wfake3 comey trump sign,0.31,0.34333333,-0.03333333,0.3266667,0.1067111
+3,S3-Fake,0,0,1,Wfake4 pennsylvania court remove trump,0.22,0.20666667,0.01333333,0.2133333,0.0455111
+3,S3-Fake,0,0,1,Wfake5 brooks says trump should be assassinated,0.41666667,0.34666667,0.07,0.3816667,0.1456694
+3,S3-Fake,0,0,1,Wfake6 eastwood rejects medal of freedom from obama,0.38,0.28666667,0.09333333,0.3333333,0.1111111
+3,S3-Fake,0,0,1,Wfake7 palin boycott mall of america because santa is white,0.30666667,0.23666667,0.07,0.2716667,0.0738028
+3,S3-Fake,0,0,1,Wfake8 trump ban gay tv shows,0.2,0.11333333,0.08666667,0.1566667,0.0245444
+3,S3-Fake,0,0,1,Wfake9 trump sent plane for marines,0.39333333,0.36,0.03333333,0.3766667,0.1418778
+3,S3-Fake,0,0,1,Wfake10 blm thug shoots himself,0.24,0.18666667,0.05333333,0.2133333,0.0455111
+3,S3-Fake,0,0,1,Wfake11 pence marriage saved by gay conversion therapy,0.26666667,0.16666667,0.1,0.2166667,0.0469444
+3,S3-Fake,0,0,1,Wfake12 trump bringing back the draft,0.13,0.15,-0.02,0.14,0.0196
+3,S3-Real,1,0,1,Real1 ryan praises trump,0.62333333,0.54,0.08333333,0.5816666,0.3383361
+3,S3-Real,1,0,1,Real2 trump on tech innovation wsj,0.64,0.53,0.11,0.585,0.342225
+3,S3-Real,1,0,1,Real3 nc repubs undermine dem gov huffpo,0.58666667,0.55666667,0.03,0.5716667,0.3268028
+3,S3-Real,1,0,1,Real4 putin involved in hack guardian,0.56666667,0.52,0.04666667,0.5433334,0.2952111
+3,S3-Real,1,0,1,Real5 trump protect lgbtq source,0.51,0.49666667,0.01333333,0.5033333,0.2533444
+3,S3-Real,1,0,1,Real6 companies keeping jobs in us msn,0.59666667,0.57333333,0.02333333,0.585,0.342225
+3,S3-Real,1,0,1,Real7 trump lashes out at vanity fair npr,0.54666667,0.58333333,-0.03666667,0.565,0.319225
+3,S3-Real,1,0,1,Real8 trump inaccurate about russia nyt,0.66333333,0.62666667,0.03666667,0.645,0.416025
+3,S3-Real,1,0,1,Real9 trump can keep business bloomberg,0.47333333,0.51,-0.03666667,0.4916667,0.2417361
+3,S3-Real,1,0,1,Real10 woman lied about attack washpo,0.55,0.56666667,-0.01666667,0.5583333,0.3117361
+3,S3-Real,1,0,1,Real11 mini recession surrounding trump tower slate,0.52,0.52333333,-0.00333333,0.5216666,0.2721361
+3,S3-Real,1,0,1,Real12 trump muslim registry,0.61333333,0.64,-0.02666667,0.6266667,0.3927111
+3.5,S3-FakeWarning,0,1,1,Wfake1 clinton drunk after election,0.17666667,0.15666667,0.02,0.1666667,0.0277778
+3.5,S3-FakeWarning,0,1,1,Wfake2 trump protester paid 3500,0.42,0.39,0.03,0.405,0.164025
+3.5,S3-FakeWarning,0,1,1,Wfake3 comey trump sign,0.29,0.31,-0.02,0.3,0.09
+3.5,S3-FakeWarning,0,1,1,Wfake4 pennsylvania court remove trump,0.22666667,0.13666667,0.09,0.1816667,0.0330028
+3.5,S3-FakeWarning,0,1,1,Wfake5 brooks says trump should be assassinated,0.34333333,0.35333333,-0.01,0.3483333,0.1213361
+3.5,S3-FakeWarning,0,1,1,Wfake6 eastwood rejects medal of freedom from obama,0.3,0.28,0.02,0.29,0.0841
+3.5,S3-FakeWarning,0,1,1,Wfake7 palin boycott mall of america because santa is white,0.25333333,0.28333333,-0.03,0.2683333,0.0720028
+3.5,S3-FakeWarning,0,1,1,Wfake8 trump ban gay tv shows,0.14333333,0.13,0.01333333,0.1366667,0.0186778
+3.5,S3-FakeWarning,0,1,1,Wfake9 trump sent plane for marines,0.38666667,0.4,-0.01333333,0.3933333,0.1547111
+3.5,S3-FakeWarning,0,1,1,Wfake10 blm thug shoots himself,0.23333333,0.19666667,0.03666667,0.215,0.046225
+3.5,S3-FakeWarning,0,1,1,Wfake11 pence marriage saved by gay conversion therapy,0.20333333,0.17666667,0.02666667,0.19,0.0361
+3.5,S3-FakeWarning,0,1,1,Wfake12 trump bringing back the draft,0.14333333,0.16333333,-0.02,0.1533333,0.0235111
+3.5,S3-RealWarning,1,1,1,Real1 ryan praises trump,0.55666667,0.56,-0.00333333,0.5583333,0.3117361
+3.5,S3-RealWarning,1,1,1,Real2 trump on tech innovation wsj,0.63,0.63,0,0.63,0.3969
+3.5,S3-RealWarning,1,1,1,Real3 nc repubs undermine dem gov huffpo,0.56,0.57,-0.01,0.565,0.319225
+3.5,S3-RealWarning,1,1,1,Real4 putin involved in hack guardian,0.58333333,0.48666667,0.09666667,0.535,0.286225
+3.5,S3-RealWarning,1,1,1,Real5 trump protect lgbtq source,0.49333333,0.52666667,-0.03333333,0.51,0.2601
+3.5,S3-RealWarning,1,1,1,Real6 companies keeping jobs in us msn,0.59333333,0.58666667,0.00666667,0.59,0.3481
+3.5,S3-RealWarning,1,1,1,Real7 trump lashes out at vanity fair npr,0.55333333,0.56,-0.00666667,0.5566667,0.3098778
+3.5,S3-RealWarning,1,1,1,Real8 trump inaccurate about russia nyt,0.61333333,0.61333333,0,0.6133333,0.3761778
+3.5,S3-RealWarning,1,1,1,Real9 trump can keep business bloomberg,0.50666667,0.49666667,0.01,0.5016667,0.2516694
+3.5,S3-RealWarning,1,1,1,Real10 woman lied about attack washpo,0.56666667,0.57333333,-0.00666667,0.57,0.3249
+3.5,S3-RealWarning,1,1,1,Real11 mini recession surrounding trump tower slate,0.56333333,0.51666667,0.04666667,0.54,0.2916
+3.5,S3-RealWarning,1,1,1,Real12 trump muslim registry,0.62666667,0.69666667,-0.07,0.6616667,0.4378028

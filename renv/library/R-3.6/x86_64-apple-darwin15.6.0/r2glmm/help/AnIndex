@@ -1,0 +1,10 @@
+calc_sgv	calc_sgv
+cmp_R2	cmp_R2
+glmPQL	glmPQL
+is.CompSym	is.CompSym
+make.partial.C	make.partial.C
+plot.R2	plot.R2
+pqlmer	pqlmer
+print.R2	print.R2
+r2beta	r2beta
+r2dt	r2dt
