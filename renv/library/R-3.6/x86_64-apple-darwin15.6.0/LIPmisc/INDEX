@@ -1,7 +1,0 @@
-eta_summary             Extension of broom::tidy with effect size and
-                        APA formatting.
-f_to_p_eta              Convinience function to convert F value to
-                        partial eta squared.
-lm_outliers             Returns outlier indices
-negligibility_test      Negligibility tests.
-plot_to_pptx            Export a plot to a powerpoint document.
