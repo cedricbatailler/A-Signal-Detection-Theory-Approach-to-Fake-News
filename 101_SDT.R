@@ -16,7 +16,13 @@ theme_set(theme_ipsum())
 # custom ----------------------------------------------------------------------
 # Afex is sometimes very slow. Because it is a pain to launch the script, wait, 
 # just to launch it again, we use a memoise versions instead.
-aov_car_m <- memoise(afex::aov_car)
+
+memoise_cache <- cache_filesystem("cache/", algo = "xxhash64")
+
+aov_car_m <- memoise(afex::aov_car,
+                     cache = memoise_cache)
+
+# forget(aov_car_m) # clean the memoise cache
 
 # Pennycook, Cannon, & Rand - study 2 -----------------------------------------
 dataset_study_2 <-

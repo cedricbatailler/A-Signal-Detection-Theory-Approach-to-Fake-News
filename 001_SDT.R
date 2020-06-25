@@ -9,7 +9,16 @@ library(glue)
 library(hrbrthemes)
 library(memoise)
 
-aov_car_m <- memoize(afex::aov_car)
+# custom ----------------------------------------------------------------------
+# Afex is sometimes very slow. Because it is a pain to launch the script, wait, 
+# just to launch it again, we use a memoise versions instead.
+
+memoise_cache <- cache_filesystem("cache/", algo = "xxhash64")
+
+aov_car_m <- memoise(afex::aov_car,
+                     cache = memoise_cache)
+
+# forget(aov_car_m) # clean the memoise cache
 
 # data import & wrangling -----------------------------------------------------
 dataset <-
