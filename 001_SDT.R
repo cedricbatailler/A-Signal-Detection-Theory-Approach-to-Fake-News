@@ -231,10 +231,8 @@ bind_rows(
                        "IDA")
   ) %>% 
   filter(index == "c") %>% 
-  group_by(study, ideology) %>% 
-  summarize(mean(index))
   ggplot(aes(x = crt, y = value, color = congruency)) +
-  facet_grid(study ~ ideology) +
+  facet_grid(study ~ index) +
   geom_jitter(alpha = .025) +
   geom_smooth(method = "lm") +
   geom_hline(yintercept = 0, linetype = "dotted") + 
