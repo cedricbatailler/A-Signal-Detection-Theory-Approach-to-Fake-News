@@ -153,7 +153,7 @@ dataset %>%
   theme_ipsum(base_size = 16, 
               strip_text_size = 16, axis_title_size = 16)
 
-ggsave("figures/ennycook & Rand (2018) - c (combined).jpg", 
+ggsave("figures/Pennycook & Rand (2018) - c (combined).jpg", 
        width = 8.5,
        height = 4.75,
        units = "in",
