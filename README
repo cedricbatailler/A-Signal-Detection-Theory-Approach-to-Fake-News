@@ -1,8 +1,0 @@
-README                                                               2020-02-07
-
-___
-This project is built to work in RStudio. To do so, simply lanch the *.Rproj 
-file.
-
-Package management uses renv to ensure reproducibility. You don't need to 
-download any package, but you will have to call the renv::restore() function.
