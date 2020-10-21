@@ -3,7 +3,7 @@
 <!-- badges: start -->
 
 [![DOI](https://img.shields.io/badge/doi-pending...-lightgrey.svg)](https://osf.io/uc9me/)
-[![CC BY 4.0](https://img.shields.io/badge/licence-CC BY 4.0-green)](https://github.com/cedricbatailler/A-Signal-Detection-Theory-Approach-to-Fake-News/blob/main/LICENCE) [![OSF
+[![CC BY 4.0](https://img.shields.io/badge/licence-CC%20BY%204.0-green)](https://github.com/cedricbatailler/A-Signal-Detection-Theory-Approach-to-Fake-News/blob/main/LICENCE) [![OSF
 repo](https://img.shields.io/badge/osf-uc9me-green.svg)](https://osf.io/uc9me/)
 
 <!-- badges: end -->
