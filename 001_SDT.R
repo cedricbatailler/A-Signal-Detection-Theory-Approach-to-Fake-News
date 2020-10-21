@@ -8,11 +8,14 @@ library(tidylog)
 library(glue)
 library(hrbrthemes)
 library(memoise)
+library(fs)
+library(JSmediation)
 
 # custom ----------------------------------------------------------------------
 # Afex is sometimes very slow. Because it is a pain to launch the script, wait, 
 # just to launch it again, we use a memoise versions instead.
 
+if(!fs::dir_exists("cache")) fs::dir_create("cache")
 memoise_cache <- cache_filesystem("cache/", algo = "xxhash64")
 
 aov_car_m <- memoise(afex::aov_car,
@@ -65,6 +68,9 @@ dataset_analysis_results <-
                          ~  aov_car_m(c ~ crt_c + Error(id/congruency),
                                        data = as.data.frame(.x),
                                        factorize = FALSE) ))
+
+# write_rds(dataset_analysis_results, path = "cache/001_SDT/dataset_analysis.rds")
+# dataset_analysis_results <- read_rds(path = "cache/001_SDT/dataset_analysis.rds")
 
 dataset_analysis_results %>% 
   select(-data) %>% 
@@ -186,16 +192,28 @@ bind_rows(
                        "IDA")
            ) %>% 
   filter(index == "d'") %>% 
-  ggplot(aes(x = crt, y = value, color = congruency)) +
+  group_by(study, congruency) %>%
+  summarise(mod = list(lm(value ~ crt, data = cur_data()) %>% broom::tidy())) %>%
+  unnest(mod) %>%
+  filter(term == "crt") %>%
+  select(c(1, 2, 4))
+  ggplot(aes(x        = crt, 
+             y        = value, 
+             color    = congruency,
+             linetype = congruency,
+             shape    = congruency)) +
   facet_grid(study ~ index) +
   geom_jitter(alpha = .025) +
-  geom_smooth(method = "lm") +
+  geom_smooth(method = "lm", show.legend = FALSE) +
+  geom_line(alpha = 0) +
   geom_hline(yintercept = 0, linetype = "dotted") + 
-  labs(x = "Cognitive Reflection Test Score",
-       y = "",
-       color = "") +
-  ggsci::scale_colour_npg() +
-  guides(colour = guide_legend(override.aes = list(alpha=0))) +
+  labs(x        = "Cognitive Reflection Test Score",
+       y        = "",
+       color    = "",
+       linetype = "",
+       shape    = "") +
+  scale_colour_grey(start = .2, end = .6) +
+  guides(shape = guide_legend(override.aes = list(alpha = 1))) +
   theme_ipsum(base_size = 16, 
               strip_text_size = 16, axis_title_size = 16)
 
@@ -230,17 +248,28 @@ bind_rows(
                        "Study 2",
                        "IDA")
   ) %>% 
-  filter(index == "c") %>% 
-  ggplot(aes(x = crt, y = value, color = congruency)) +
+  # filter(index == "c") %>% 
+  # group_by(study, congruency) %>%
+  # summarise(mod = list(lm(value ~ crt, data = cur_data()) %>% broom::tidy())) %>%
+  # unnest(mod) %>%
+  # filter(term == "crt") %>%
+  # select(c(1, 2, 4))
+  ggplot(aes(x = crt, y = value,
+             color = congruency,
+             linetype = congruency,
+             shape = congruency)) +
   facet_grid(study ~ index) +
   geom_jitter(alpha = .025) +
-  geom_smooth(method = "lm") +
+  geom_smooth(method = "lm", show.legend = FALSE) +
   geom_hline(yintercept = 0, linetype = "dotted") + 
+  geom_line(alpha = 0) +
   labs(x = "Cognitive Reflection Test Score",
-       y = "",
-       color = "") +
-  ggsci::scale_colour_npg() +
-  guides(colour = guide_legend(override.aes = list(alpha=0))) +
+       y        = "",
+       color    = "",
+       linetype = "",
+       shape    = "") +
+  scale_colour_grey(start = .2, end = .6) +
+  guides(shape  = guide_legend(override.aes = list(alpha = 1))) +
   theme_ipsum(base_size = 16, 
               strip_text_size = 16, axis_title_size = 16)
 
@@ -249,7 +278,6 @@ ggsave("figures/Pennycook & Rand (2018) - c (Study 1, 2, & combined).jpg",
        height = 7.75,
        units = "in",
        dpi = 600)
-
 
 # betas -------------------------------------------------------------------
 dataset_analysis %>% 
