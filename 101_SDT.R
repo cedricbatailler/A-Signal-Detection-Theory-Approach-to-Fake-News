@@ -61,7 +61,7 @@ dataset_study_2 %>%
             sd   = sd(dprime))
 
 dataset_study_2 %>% 
-  group_by(warning, id) %>% 
+  group_by(familiarity, id) %>% 
   summarise(dprime = mean(dprime)) %>% 
   summarise(mean = mean(dprime),
             sd   = sd(dprime))
