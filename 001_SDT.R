@@ -134,6 +134,10 @@ ggsave("figures/Pennycook & Rand (2018) - d' (combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook & Rand (2018) - d' (combined).pdf",
+       device = cairo_pdf, 
+       width = 8.5,
+       height = 4.75)
 # c ---------------------------------------------------------------------------
 dataset %>%
   gather(index, value,
@@ -171,6 +175,10 @@ ggsave("figures/Pennycook & Rand (2018) - c (combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook & Rand (2018) - c (combined).pdf",
+       device = cairo_pdf, 
+       width = 8.5,
+       height = 4.75)
 # Appendix figures ------------------------------------------------------------
 # d' --------------------------------------------------------------------------
 bind_rows(
@@ -229,6 +237,11 @@ ggsave("figures/Pennycook & Rand (2018) - d' (Study 1, 2, & combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook & Rand (2018) - d' (Study 1, 2, & combined).pdf", 
+       device = cairo_pdf,
+       width = 8.5,
+       height = 7.75,
+       units = "in")
 # c ---------------------------------------------------------------------------
 bind_rows(
   dataset,
@@ -285,6 +298,11 @@ ggsave("figures/Pennycook & Rand (2018) - c (Study 1, 2, & combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook & Rand (2018) - c (Study 1, 2, & combined).pdf", 
+       device = cairo_pdf,
+       width = 8.5,
+       height = 7.75,
+       units = "in")
 # betas -------------------------------------------------------------------
 dataset_analysis %>% 
   mutate(id = glue("{study}-{id}")) %>% 

@@ -256,6 +256,11 @@ ggsave("figures/Pennycook et al. (2018) - c (Study 2, 3, & combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook et al. (2018) - c (Study 2, 3, & combined).pdf", 
+       device = cairo_pdf,
+       width = 8.5,
+       height = 7.75,
+       units = "in")
 bind_rows(
   dataset_study_2 %>% mutate(presentation = familiarity_c + 0.5),
   dataset_study_3 %>% mutate(presentation = presentation_lin + 1)
@@ -289,6 +294,11 @@ ggsave("figures/Pennycook et al. (2018) - c (combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook et al. (2018) - c (combined).pdf",
+       device = cairo_pdf,
+       width = 8.5,
+       height = 4.75,
+       units = "in")
 # d' ----------------------------------------------------------------------
 bind_rows(
   dataset_study_2 %>% mutate(presentation = familiarity_c + 0.5) %>% add_column(study = "Study 2"),
@@ -329,6 +339,11 @@ ggsave("figures/Pennycook et al. (2018) - d' (Study 2, 3, & combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook et al. (2018) - d' (Study 2, 3, & combined).pdf", 
+       device = cairo_pdf,
+       width = 8.5,
+       height = 7.75,
+       units = "in")
 bind_rows(
   dataset_study_2 %>% mutate(presentation = familiarity_c + 1.5),
   dataset_study_3 %>% mutate(presentation = presentation_lin + 2)
@@ -362,6 +377,11 @@ ggsave("figures/Pennycook et al. (2018) - d' (combined).jpg",
        units = "in",
        dpi = 600)
 
+ggsave("figures/Pennycook et al. (2018) - d' (combined).pdf", 
+       device = cairo_pdf,
+       width = 8.5,
+       height = 4.75,
+       units = "in")
 # Sat Feb 29 15:29:51 2020 ------------------------------
 bind_rows(
   dataset_study_2 %>% mutate(presentation = familiarity_c + .5) %>% add_column(study = "Study 2"),
