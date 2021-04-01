@@ -40,12 +40,8 @@ Folder:
 
 Note that the R scripts we used for this project are stored in the root folder.
 
--   Documents starting with `0` or `1` and are scripts dedicated for the paper
-
-    (0) and (1)
-
+-   Documents starting with `0` or `1` and are scripts dedicated for the paper (0) and (1)
 -   Documents ending with `0` are wrangling scripts
-
 -   Documents ending with `1` are analyses scripts
 
 ### Note
