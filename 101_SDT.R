@@ -35,8 +35,14 @@ dataset_study_2 <-
   as_tibble() %>% 
   # computing d' sensitivity index with log-linear rule correction 
   # (Hautus, 1995)
-  mutate(hit_rate = (real_accurate + .5) / (real_inaccurate + real_accurate + 1.5),
-         fa_rate  = (fake_accurate + .5) / (fake_accurate + fake_inaccurate + 1.5),
+  # >>>
+  mutate(real_accurate   = real_accurate   + .5,
+         real_inaccurate = real_inaccurate + .5,
+         fake_accurate   = fake_accurate   + .5,
+         fake_inaccurate = fake_inaccurate +.5) %>% 
+  #  <<<
+  mutate(hit_rate = (real_accurate) / (real_inaccurate + real_accurate),
+         fa_rate  = (fake_accurate) / (fake_accurate + fake_inaccurate),
          dprime   = qnorm(hit_rate) - qnorm(fa_rate),
          c        = -1 * (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
   mutate(familiarity_c = case_when(familiarity == "old" ~  .5,
@@ -104,8 +110,14 @@ dataset_study_3 <-
   as_tibble() %>%  
   # computing d' sensitivity index with log-linear rule correction 
   # (Hautus, 1995)
-  mutate(hit_rate = (real_accurate + .5) / (real_inaccurate + real_accurate + 1.5),
-         fa_rate  = (fake_accurate + .5) / (fake_accurate + fake_inaccurate + 1.5),
+  # >>>
+  mutate(real_accurate   = real_accurate   + .5,
+         real_inaccurate = real_inaccurate + .5,
+         fake_accurate   = fake_accurate   + .5,
+         fake_inaccurate = fake_inaccurate +.5) %>% 
+  #  <<<
+  mutate(hit_rate = (real_accurate) / (real_inaccurate + real_accurate),
+         fa_rate  = (fake_accurate) / (fake_accurate + fake_inaccurate),
          dprime   = qnorm(hit_rate) - qnorm(fa_rate),
          c        = -1 * (qnorm(hit_rate) + qnorm(fa_rate)) / 2 ) %>% 
   mutate(presentation_lin  = presentation - 2,
